@@ -31,8 +31,7 @@ for the known reproducibility boundary.
 - Checkpoints and prediction caches.
 - The original formal baseline-adapter source used for Tables IV-V.
 - The original 64-superzone builder, greedy dispatch, route-attention DDQN,
-  stacked RCOG, and residual-safe training source used for Table IX. Those files
-  were recorded under an older `D:\STDR` workspace that is not currently mounted.
+  stacked RCOG, and residual-safe training source used for Table IX.
 
 No implementation from a different project has been substituted for missing
 paper code.
