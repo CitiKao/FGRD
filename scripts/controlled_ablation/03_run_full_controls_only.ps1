@@ -1,0 +1,28 @@
+param(
+    [string]$Python = "python",
+    [int]$GapEpochs = 200,
+    [int]$VEpochs = 610,
+    [int]$Patience = 20,
+    [int]$CheckpointEvery = 25,
+    [string]$OutputRoot = ""
+)
+
+$ErrorActionPreference = "Stop"
+$Root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+Set-Location $Root
+
+$ArgsList = @(
+    "-u", "tools\run_nyc_gap_v_controlled_ablation_suite.py",
+    "--only", "gap_full_control,v_full_control",
+    "--gap-epochs", "$GapEpochs",
+    "--v-epochs", "$VEpochs",
+    "--patience", "$Patience",
+    "--checkpoint-every", "$CheckpointEvery",
+    "--python-exe", "$Python"
+)
+if ($OutputRoot) {
+    $ArgsList += @("--output-root", $OutputRoot)
+}
+
+& $Python @ArgsList
+exit $LASTEXITCODE

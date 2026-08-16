@@ -1,0 +1,53 @@
+{
+  "experiment": "NYC GAP/V controlled structure ablation",
+  "comparison_rule": "Each ablation is compared only with the Full control trained under the same task protocol.",
+  "shared": {
+    "dataset": "NYC",
+    "data_dir": "data/nyc_dc",
+    "seed": 42,
+    "history_and_target_windows_must_remain_within_split": true,
+    "report_horizons_minutes": [15, 30, 60],
+    "validation_only_checkpoint_selection": true
+  },
+  "gap_protocol": {
+    "epoch_cap": 200,
+    "early_stopping_patience": 20,
+    "batch_size": 8,
+    "history_length": 14,
+    "prediction_horizon_steps": 4,
+    "hidden_dimension": 16,
+    "full_st_blocks": 2,
+    "learning_rate": 0.001,
+    "target_transform": "signed_log",
+    "calibration": "stepwise_shrink"
+  },
+  "v_protocol": {
+    "epoch_cap": 610,
+    "early_stopping_patience": 20,
+    "batch_size": 32,
+    "history_length": 12,
+    "prediction_horizon_steps": 4,
+    "hidden_dimension": 32,
+    "full_st_blocks": 2,
+    "learning_rate": 0.001,
+    "precision": "bf16",
+    "adaptive_edge_relation": true,
+    "optional_fixed_road_length_input": false
+  },
+  "runs": [
+    "gap_full_control",
+    "gap_no_adaptive",
+    "gap_single_st_block",
+    "gap_no_fixed_graph",
+    "v_full_control",
+    "v_no_adaptive",
+    "v_single_st_block",
+    "v_no_fixed_graph"
+  ],
+  "excluded": [
+    "paper_cache/v",
+    "raw taxi records",
+    "other-city data",
+    "routing and RCOG experiments"
+  ]
+}

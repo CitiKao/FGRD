@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "dataset": "NYC",
+    "slot_minutes": 15,
+    "report_steps": {
+      "15min": 1,
+      "30min": 2,
+      "60min": 4
+    }
+  },
+  "gap": {
+    "architecture": "Full ST-GAPV GAP branch",
+    "target": "direct future GAP",
+    "checkpoint_candidates": [
+      {
+        "id": "low_lr_epoch003",
+        "role": "selected for 15min by validation"
+      },
+      {
+        "id": "high_lr_epoch003",
+        "role": "selected for 30min and 60min by validation"
+      }
+    ],
+    "selection_split": "validation",
+    "selection_score": "RMSE + MAE + 0.05 * MAPE",
+    "test_used_for_selection": false,
+    "calibration": "stepwise shrink fitted on validation only"
+  },
+  "v": {
+    "architecture": "Four full ST-GAPV speed checkpoint streams",
+    "candidate_order": [
+      "stream_01",
+      "stream_02",
+      "stream_03",
+      "stream_04",
+      "persistence",
+      "calendar_average",
+      "lag_day",
+      "lag_week",
+      "history_mean_3",
+      "history_mean_12"
+    ],
+    "calibration": "Frozen validation-selected horizon-wise convex weights",
+    "test_time_fitting": false,
+    "reported_horizon_neural_weight_sums": {
+      "15min": 0.0,
+      "30min": 0.0,
+      "60min": 0.0
+    }
+  }
+}

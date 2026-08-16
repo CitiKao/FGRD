@@ -1,0 +1,5 @@
+variant,val_improvement_pct,test_improvement_pct,full_year_improvement_pct,test_activation_pct,test_benefit_precision_pct,test_opportunity_capture_pct,test_bad_all_gt5_pct,test_bad_active_gt5_pct,source
+Raw DDQN only,-0.1855,-0.1590,-0.1539,3.7318,25.50,40.42,0.8559,22.94,FGRD_latest_main_20260801_Table_IX
+DDQN plus residual scorer no RCOG,0.0386,0.0379,0.0447,0.2573,87.62,9.58,0.0100,3.89,FGRD_latest_main_20260801_Table_IX
+DDQN plus stacked RCOG only,0.0416,0.0419,0.0756,0.7867,58.85,19.66,0.0513,6.52,FGRD_latest_main_20260801_Table_IX
+Full DDQN plus stacked RCOG plus residual scorer,0.0417,0.0421,0.0759,0.7867,58.75,19.63,0.0510,6.49,FGRD_latest_main_20260801_Table_IX

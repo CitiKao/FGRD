@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Datasets and generated graph artifacts
+data/
+datasets/
+artifacts/
+paper_checkpoints/
+paper_cache/
+paper_weights/
+*.npy
+*.npz
+
+# Training outputs and model weights
+runs/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.log
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

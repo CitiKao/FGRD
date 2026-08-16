@@ -1,0 +1,13 @@
+variant,horizon,rmse,mae,mape,source
+Best single checkpoint,15min,1.914,1.082,5.176,FGRD_latest_main_20260801_Table_VIII
+Best single checkpoint,30min,1.937,1.095,5.246,FGRD_latest_main_20260801_Table_VIII
+Best single checkpoint,60min,1.926,1.094,5.255,FGRD_latest_main_20260801_Table_VIII
+Mean of four checkpoints,15min,2.033,1.109,5.350,FGRD_latest_main_20260801_Table_VIII
+Mean of four checkpoints,30min,2.048,1.115,5.381,FGRD_latest_main_20260801_Table_VIII
+Mean of four checkpoints,60min,2.050,1.117,5.428,FGRD_latest_main_20260801_Table_VIII
+Four-checkpoint horizon-wise ensemble,15min,1.882,1.038,5.031,FGRD_latest_main_20260801_Table_VIII
+Four-checkpoint horizon-wise ensemble,30min,1.900,1.046,5.072,FGRD_latest_main_20260801_Table_VIII
+Four-checkpoint horizon-wise ensemble,60min,1.892,1.050,5.104,FGRD_latest_main_20260801_Table_VIII
+Full ensemble plus six historical candidates,15min,1.283,0.351,2.192,FGRD_latest_main_20260801_Table_VIII
+Full ensemble plus six historical candidates,30min,1.284,0.352,2.196,FGRD_latest_main_20260801_Table_VIII
+Full ensemble plus six historical candidates,60min,1.286,0.353,2.202,FGRD_latest_main_20260801_Table_VIII

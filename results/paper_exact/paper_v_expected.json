@@ -1,0 +1,21 @@
+{
+  "dataset": "NYC",
+  "method": "Four ST-GAPV streams plus six causal candidates with frozen horizon-wise weights",
+  "report": {
+    "15min": {
+      "rmse": 1.2827573731959958,
+      "mae": 0.3514824890740899,
+      "mape": 2.1921039730040195
+    },
+    "30min": {
+      "rmse": 1.2839011769557145,
+      "mae": 0.3520144637273812,
+      "mape": 2.1955688583500557
+    },
+    "60min": {
+      "rmse": 1.2862001659165614,
+      "mae": 0.3531080780759545,
+      "mape": 2.202342487168225
+    }
+  }
+}
